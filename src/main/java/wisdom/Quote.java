@@ -2,6 +2,7 @@ package wisdom;
 
 import org.springframework.data.annotation.Id;
 import java.util.Date;
+// trigger heroku push
 
 
 public class Quote {
