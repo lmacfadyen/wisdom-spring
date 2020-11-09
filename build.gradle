@@ -1,11 +1,17 @@
 buildscript {
+    ext {
+        springBootVersion = '2.3.5.RELEASE'
+    }
     repositories {
         mavenCentral()
     }
     dependencies {
-        classpath("org.springframework.boot:spring-boot-gradle-plugin:2.3.5.RELEASE")
+        classpath(
+                "org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
     }
 }
+
+
 
 apply plugin: 'java'
 apply plugin: 'eclipse'
@@ -13,6 +19,10 @@ apply plugin: 'idea'
 apply plugin: 'org.springframework.boot'
 apply plugin: "io.spring.dependency-management"
 
+
+/*plugins {
+    id "org.springframework.boot" version "2.3.5.RELEASE"
+}*/
 jar {
     baseName = 'gs-accessing-mongodb-data-rest'
     version = '2.1.6'
