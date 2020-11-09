@@ -52,8 +52,8 @@ build.mustRunAfter clean
 
 stage.mustRunAfter(clean)
 
-apply plugin:'application'
-mainClassName = "wisdom-spring.Application"
+/*apply plugin:'application'
+mainClassName = "wisdom-spring.Application"*/
 
 repositories {
     maven { url "https://repo.maven.apache.org/maven2" }
