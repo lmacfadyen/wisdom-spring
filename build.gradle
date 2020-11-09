@@ -3,7 +3,7 @@ buildscript {
         springBootVersion = '2.3.5.RELEASE'
     }
     repositories {
-        mavenCentral()
+        maven { url "https://repo.maven.apache.org/maven2" }
     }
     dependencies {
         classpath(
@@ -54,6 +54,9 @@ stage.mustRunAfter(clean)
 apply plugin:'application'
 mainClassName = "wisdom-spring.Application"
 
+repositories {
+    maven { url "https://repo.maven.apache.org/maven2" }
+}
 
 task {
     doLast {
@@ -61,9 +64,6 @@ task {
     }
 }
 
-repositories {
-    mavenCentral()
-}
 
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
